@@ -1,0 +1,332 @@
+$backgroundcolor: #632e2f;
+$messagescolor: #e9b68c;
+$sidebarselect: #c54c35;
+$sidebarbackground: #97463a;
+$headercolor: #272e34;
+$headercolor2: #4c5259;
+$textcolor: #ffe6b7;
+
+.formContainer {
+  background-color: $backgroundcolor;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .formWrapper {
+    background-color: white;
+    padding: 25px 65px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    .logo {
+      color: #5d5b8d;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .title {
+      color: #5d5b8d;
+      font-size: 16px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #8da4f1;
+        font-size: 14px;
+        cursor: pointer;
+
+        img {
+          width: 32px;
+        }
+      }
+
+      input {
+        padding: 15px;
+        border: none;
+        border-bottom: 1px solid #a7bcff;
+      }
+
+      button {
+        background-color: #7b96ec;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+      }
+
+      .errormessage {
+        background-color: red;
+        align-items: center;
+        text-align: center;
+        margin: 5px;
+        padding: 8px;
+        border-radius: 7px;
+      }
+    }
+    p {
+      color: #5d5b8d;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.home {
+  background-color: $backgroundcolor;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    overflow: hidden;
+
+    .sidebar {
+      flex: 1;
+      background-color: $sidebarbackground;
+
+      .search {
+        border-bottom: 1px solid gray;
+
+        .searchForm {
+          padding: 10px;
+
+          input {
+            background-color: transparent;
+            border: none;
+            color: white;
+            outline: none;
+
+            &::placeholder {
+              color: lightgray;
+            }
+          }
+        }
+      }
+
+      .userChat {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        cursor: pointer;
+
+        p {
+          max-width: 25ch;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &:hover {
+          background-color: $sidebarselect;
+        }
+
+        .notificationicon {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .delete {
+          margin-left: auto;
+          padding-right: 10px;
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .userChatInfo {
+          span {
+            font-size: 18px;
+            font-weight: bold;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        background-color: $headercolor;
+        height: 50px;
+        padding: 10px;
+        justify-content: space-between;
+        color: #ddddf7;
+
+        .logo {
+          font-weight: bold;
+        }
+
+        .user {
+          display: flex;
+          gap: 10px;
+
+          img {
+            background-color: #ddddf7;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          button {
+            background-color: #5d5b8d;
+            color: #ddddf7;
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .conversation {
+      flex: 2;
+
+      .headerInfo {
+        height: 50px;
+        background-color: $headercolor2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        color: lightgray;
+      }
+
+      .optionIcon {
+        display: flex;
+        img {
+          height: 24px;
+          padding-right: 20px;
+          cursor: pointer;
+        }
+      }
+
+      .history {
+        background-color: $messagescolor;
+        padding: 10px;
+        height: calc(100% - 160px);
+        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .message {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 10px;
+
+          .messageInfo {
+            display: flex;
+            flex-direction: column;
+            color: gray;
+            font-weight: lighter;
+            font-size: 12px;
+            img {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+
+          .messageContent {
+            max-width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+
+            p {
+              background-color: white;
+              padding: 10px 20px;
+              border-radius: 0px 11px 11px 11px;
+              max-width: max-content;
+            }
+            img {
+              width: 50%;
+            }
+          }
+
+          &.owner {
+            flex-direction: row-reverse;
+            span {
+              text-align: right;
+            }
+
+            .messageContent {
+              align-items: flex-end;
+              p {
+                background-color: #8da4f1;
+                color: white;
+                border-radius: 11px 0px 11px 11px;
+              }
+            }
+          }
+        }
+      }
+
+      .typebox {
+        height: 50px;
+        background-color: white;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        input {
+          width: 100%;
+          border: none;
+          outline: none;
+          color: #2f2d52;
+          font-size: 18px;
+          &::placeholder {
+            color: lightgray;
+          }
+        }
+
+        button {
+          display: flex;
+          padding: 10px;
+          border-radius: 50%;
+          background-color: #8da4f1;
+          border: none;
+          &:hover {
+            background-color: cyan;
+            cursor: pointer;
+          }
+          img {
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
