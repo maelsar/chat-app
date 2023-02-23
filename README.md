@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Ploky-Chat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Start the App
 
-## Available Scripts
-
-In the project directory, you can run:
-
+In the project directory run the following code in the terminal:
+### `npm install` then
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Login
+You can login and test the App with the following credentials:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1) email: `test1@gmail.com` password: `123456`
+2) email: `test2@gmail.com` password: `123456`
+3) email: `test3@gmail.com` password: `123456`
 
-### `npm test`
+or you can register with a new credentials.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Message
 
-### `npm run build`
+I made this app with the intential to deploy it for my CV as well as the assessment requirement.
+I opted to use `Firebase` for my Authentication and Database Services.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## App features
+1) Login Authentication and Registration is handled by Firebase
+2) Contact list for conversations with other users
+3) Search function to search for existing users
+4) Sender and Receiver message positioning
+5) Message Timestamps
+6) Notification Icons for new and unread messages
+7) User Avatar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## App Notes and Limitations
+The app was done is a rush and it still has missing features and bug testing lacks further bug testing.
+### List of known missing features
+1) Header Icon to `add user in existing conversation(groupchat)` has been added but doesn't function
+2) Trash icon to `Delete a conversation` has been added but also doesn't function
